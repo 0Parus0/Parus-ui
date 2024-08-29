@@ -83,7 +83,7 @@ export async function SellProduct(prevState: any, formData: FormData) {
     },
   });
 
-  return redirect(`/product/${data.id}`)
+  return redirect(`/product/${data.id}`);
 }
 
 export async function UpdateUserSettings(prevState: any, formData: FormData) {
@@ -162,7 +162,6 @@ export async function BuyProduct(formData: FormData) {
     ],
     metadata: {
       link: data?.productFile as string,
-    
     },
     payment_intent_data: {
       application_fee_amount: Math.round((data?.price as number) * 100) * 0.1,
@@ -170,8 +169,14 @@ export async function BuyProduct(formData: FormData) {
         destination: data?.User?.connectedAccountId as string,
       },
     },
-    success_url: "http://localhost:3000/payment/success",
-    cancel_url: "http://localhost:3000/payment/cancel",
+    success_url:
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3000/payment/success"
+        : "https://parus-ui.vercel.app/payment/success",
+    cancel_url:
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3000/payment/cancel"
+        : "https://parus-ui.vercel.app/payment/cancel",
   });
 
   return redirect(session.url as string);
@@ -197,14 +202,14 @@ export async function CreateStripeAccountLink() {
 
   const accountLink = await stripe.accountLinks.create({
     account: data?.connectedAccountId as string,
-    refresh_url: "http://localhost:3000/billing",
-    // process.env.NODE_ENV === "development"
-    //   ? `http://localhost:3000/billing`
-    //   : `https://marshal-ui-yt.vercel.app/billing`,
-    return_url: `http://localhost:3000/return/${data?.connectedAccountId}`,
-    // process.env.NODE_ENV === "development"
-    //   ? `http://localhost:3000/return/${data?.connectedAccountId}`
-    //   : `https://marshal-ui-yt.vercel.app/return/${data?.connectedAccountId}`,
+    refresh_url:
+      process.env.NODE_ENV === "development"
+        ? `http://localhost:3000/billing`
+        : `https://parus-ui.vercel.app/billing`,
+    return_url:
+      process.env.NODE_ENV === "development"
+        ? `http://localhost:3000/return/${data?.connectedAccountId}`
+        : `https://parus-ui.vercel.app/return/${data?.connectedAccountId}`,
     type: "account_onboarding",
   });
 
