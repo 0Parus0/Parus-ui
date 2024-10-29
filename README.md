@@ -1,3 +1,59 @@
+
+
+
+# ParusUI-Digital Marketplace for UI Components
+A digital marketplace where users can buy and sell UI components like templates, UI kits, and icons. The buyer will get an email containing the prodouct been bought and the seller will get the 90% of the sale and remaining 10% will be divided between Stripe and The PausUI. This project showcases my Next.js skills, frontend design, and a very secure payment processing including not only one time  payments with Stripe checkout but the Market place will get it's share using Stripe connect as well and usage of web hooks. An integration of text editor in the app where seller can describe his product.
+
+## Demo
+Check out the live demo [here](https://parus-ui.vercel.app/).
+
+
+
+## Features
+
+- **User Auth/Registration/Profile:** Sign up, log in, manage profile and multi-factor auth.
+- **Search/Sort/Filter/Pagination:** Search different items like Icons pack, UI Templates, and UI kits.
+- **Stripe checkout & Stripe Connect :** Create a Stripe connect Account, Which lets the market place gets its share .
+- **Strip-Express dashboard:** Seller can login and can check all of the transactions happend on his product.
+- **Real-Time Updates:** Add items to the cart and update orders in real-time.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop.
+- **Supabase + Prisma:** Supabase for hosting PostgressQl database and Prisma for TypeScript ORM.
+- **File & Image Uploads:** Uploading files and images to uploadthing which uses AWS S3.
+- **Rich Text Editor:** A rich text editor built into the market place, for seller to describe his product.
+- **Vercel: ** Hosted on Vercel.
+
+## Technologies Used
+
+- **Frontend:** TypeScript, Nextjs, TipTap Editor, React Hook Form, TailwindCss, and ShadcnUI.
+- **Backend:** TypeScript, Next.js.
+- **Database:** SupabaseDB, PostgressQl, Prisma ORM
+- **Others:** GitHub, Kinde for authentication, Stripe checkout & Stripe Connect, Uploadthing.
+
+## Getting Started
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- Node.js and npm
+- MongoDB (for the database)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/0Parus0/parus-ui.git
+   cd food-ordering-app
+
+2. **Install dependencies:**
+  ```bash
+  npm install
+```
+3. **Run:**
+  ```bash
+  npm run dev
+  ```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -13,24 +69,3 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
