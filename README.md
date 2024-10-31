@@ -2,7 +2,7 @@
 
 
 # ParusUI-Digital Marketplace for UI Components
-A digital marketplace where users can buy and sell UI components like templates, UI kits, and icons. The buyer will get an email containing the prodouct been bought and the seller will get the 90% of the sale and remaining 10% will be divided between Stripe and The PausUI. This project showcases my Next.js skills, frontend design, and a very secure payment processing including not only one time  payments with Stripe checkout but the Market place will get it's share using Stripe connect as well and usage of web hooks. An integration of text editor in the app where seller can describe his product.
+A digital marketplace for buying and selling UI components such as templates, UI kits, and icons. Upon purchase, buyers receive a confirmation email with the purchased product, while sellers retain 90% of the sale revenue, with the remaining 10% divided between Stripe fees and ParusUI. This project demonstrates my expertise in Next.js, frontend design, and secure payment processing, utilizing both Stripe Checkout for one-time payments and Stripe Connect for revenue sharing. The app also integrates webhooks for transaction management and includes an embedded text editor for sellers to describe their products in detail
 
 ## Demo
 Check out the live demo [here](https://parus-ui.vercel.app/).
